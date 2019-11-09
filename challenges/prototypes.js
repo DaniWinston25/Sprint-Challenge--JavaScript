@@ -34,6 +34,14 @@ CuboidMaker.prototype.surfaceArea = function (){
   Create a cuboid object that uses the new keyword to use our CuboidMaker constructor
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid.   
 */
+Cuboid.prototype = Object.create (CuboidMaker.prototype)
+
+Cuboid.prototype.constructor = Cuboid;
+Cuboid = function (length, width, hieght){
+  this.length = 4; 
+  this.width = 5; 
+  this.hieght = 5;
+}
 
 
 // Test your volume and surfaceArea methods by uncommenting the logs below:
