@@ -18,8 +18,8 @@ surfaceArea(){
 
 class Cuboid extends CuboidMaker{
 constructor (length, width, hieght){
-    super(length, width, hieght)
-    this.length = 4; 
+super(length, width, hieght)
+  this.length = 4; 
   this.width = 5; 
   this.hieght = 5;
   }
