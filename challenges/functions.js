@@ -8,8 +8,16 @@
 */
 
 function consume(a, b, cb){
-  
+  function digest(a, b) {
+    if (a >= b) {
+      return a;
+    } else {
+      return b;
+    }
+  }
+  return callback(digest);
 }
+
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
