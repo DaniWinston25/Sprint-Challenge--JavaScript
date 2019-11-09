@@ -5,6 +5,11 @@
   Use this pattern to create your objects: 
   object name, diet, weight, length, period
 */
+name = dinosaur.name;
+diet = dinosaur.diet;
+weight = dinosaur.weight;
+length = dinosaur.length;
+period = dinosaur.period;
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 
@@ -15,16 +20,16 @@
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log();
+console.log(tyrannosaurus.weight);
 
 // What was the diet of a velociraptor?
-console.log();
+console.log(velociraptor.diet);
 
 // How long was a stegosaurus?
-console.log();
+console.log(stegosaurus.length);
 
 // What time period did tyrannosaurus live in?
-console.log();
+console.log(tyrannosaurus.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
@@ -117,12 +122,12 @@ console.log(lowPopulationAnimals);
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-function processSum(numberList, callback) {
-  const NewSum = numberList.reduce(sum, 0);
+function processSum(zooAnimals, callback) {
+  const totalAnimals = zooAnimals.reduce(sum, 0);
   function sum(accum, item) {
     return accum + item;
   }
-  return callback(NewSum);
+  return callback(totalAnimals);
 }
 
 const populationTotal = 0;
