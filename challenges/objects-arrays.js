@@ -5,13 +5,12 @@
   Use this pattern to create your objects: 
   object name, diet, weight, length, period
 */
-Object(dinosaur){
+Object(dinosaur)=
 name = dinosaur.name;
 diet = dinosaur.diet;
 weight = dinosaur.weight;
 length = dinosaur.length;
 period = dinosaur.period;
-}
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
@@ -60,15 +59,30 @@ const graduates = [
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array. This will be an array of strings.
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = [];
+const graduateArray = arr;
+const universities = graduateArray;
+universities.sort(function(firstname, email) {
+  var x = firstname.toLowerCase();
+  var y = email.toLowerCase();
+  if (x < y) {
+    return -1;
+  }
+  if (x > y) {
+    return 1;
+  }
+  return 0;
+});
 console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
+
 
 The resulting contact information strings should have a space between the first name and the email, like this: 
 "Josh josh@example.com"
 
 Log the result of your new array. */
+
+
 const contactInfo = [];
 console.log(contactInfo);
 
@@ -104,11 +118,14 @@ console.log(displayNames);
 
 /* Request 2: .map()
 
-The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
+The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the result.
 
 */
 
 const lowCaseAnimalNames = [];
+lowCaseAnimalNames.map(function(animal_name){
+ return animal_name;
+});
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
@@ -117,6 +134,8 @@ The zoos are concerned about animals with a lower population count. Using filter
 
 */
 const lowPopulationAnimals = [];
+function lowPopulationAnimals(population){
+   population.filter((population) => population.length < 5)
 console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
@@ -133,9 +152,8 @@ function processSum(zooAnimals, callback) {
   }
   return callback(totalAnimals);
 }
-
-const populationTotal = 0;
-console.log(populationTotal);
+}
+console.log(processSum);
 
 
 /*
