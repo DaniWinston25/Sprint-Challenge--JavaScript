@@ -5,12 +5,13 @@
   Use this pattern to create your objects: 
   object name, diet, weight, length, period
 */
+Object(dinosaur){
 name = dinosaur.name;
 diet = dinosaur.diet;
 weight = dinosaur.weight;
 length = dinosaur.length;
 period = dinosaur.period;
-
+}
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
@@ -33,7 +34,10 @@ console.log(tyrannosaurus.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-console.log();
+function roar(){
+  return "RAWERSRARARWERSARARARRRR!";
+}
+console.log(roar);
 
 
 // ==== Arrays ====
